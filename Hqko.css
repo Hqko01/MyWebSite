@@ -1,259 +1,200 @@
 * {
-    padding: 0;
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    background-color: #03071e;
+    background: url("https://cdn.discordapp.com/attachments/838877542269845525/905835592703676416/backupPreview.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
 }
 
-.cardHD {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.cardHD::after {
-    content: '';
+.load {
     position: absolute;
-    width: 200px;
-    height: 480px;
-    background: linear-gradient(180deg , #ffba08, #d00000);
-    filter: blur(6px);
-    box-shadow: 0 -20px 19px #ffba08;
-    box-shadow: 0 20px 10px #d00000;
-    border-radius: 10px;
-    transform: skewY(20deg);
-    animation: cardafterskew 4s infinite;
-    z-index: -1;
-}
-
-@keyframes cardafterskew {
-    0%,100% {
-        transform: skewY(20deg);
-    }
-
-    50% {
-        transform: skewY(-20deg);
-    }
-}
-
-.cardHD .card {
-    position: relative;
-    height: 400px;
-    width: 350px;
-    border-radius: 3px;
-    z-index: 20;
-}
-
-.cardHD .card span {
-    position: absolute;
+    background-color: rgb(190, 100, 115);
+    z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: rgba(95, 90, 97, 0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(30px);
-    z-index: 1;
-}
-
-.cardHD .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: rgb(177, 171, 171);
-    animation: cardbefore 9s infinite;
-}
-
-@keyframes cardbefore {
-    0%,100% {
-        top: 0;
-        left: 0;
-    }
-
-    25% {
-        top: 80%;
-        left: 0;
-    }
-    
-    50% {
-        top: 80%;
-        left: 70%;
-    }
-
-    75% {
-        top: 0;
-        left: 70%;
-    }
-}
-
-.cardHD .card .content {
-    position: absolute;
-    color: white;
-    z-index: 25;
-}
-
-.cardHD .card .content h1 {
-    font-size: 40px;
-    margin: 40px;
-}
-
-.cardHD .card .content p {
-    font-size: 30px;
-    margin: 20px;
-}
-
-.cardHD .card .content p u {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.cardHD .card .buttons {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    z-index: 200;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cardHD .card .buttons button {
-    border: none;
-    background-color: transparent;
-    outline: none;
+.load .loader-container {
+    font-size: 80px;
+    color: pink;
+    animation: Loader 1s linear infinite;
 }
 
-.cardHD .card .buttons i {
-    font-size: 45px;
-    color: rgb(201, 201, 201);
+@keyframes Loader {
+    to {
+        transform: rotateZ(360deg);
+    }
+
+    0%,100% {
+        font-size: 80px;
+    }
+
+    50% {
+        font-size: 50px;
+    }
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .cardbg::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(202, 16, 16, 0.3);
+    filter: blur(8px);
+}
+
+.card .cardheader {
+    padding: 20px 0 10px 35px;
+    font-size: 3pc;
+}
+
+.card .cardheader c {
+    animation: c 1s linear infinite;
+}
+
+.card .cardheader x {
+    animation: x 1.2s linear infinite;
+}
+
+.card .cardheader v {
+    animation: v 1.4s linear infinite;
+}
+
+.card .cardheader m {
+    animation: m 1.6s linear infinite;
+}
+
+@keyframes m {
+    0% {
+        color: pink;
+    }
+
+    100% {
+        color: #184e77;
+    }
+}
+
+@keyframes v {
+    0% {
+        color: pink;
+    }
+    
+    100% {
+        color: #184e77;
+    }
+}
+
+@keyframes x {
+    0% {
+        color: pink;
+    }
+
+    100% {
+        color: #184e77;
+    }
+}
+
+@keyframes c {
+    0% {
+        color: pink;
+    }
+
+    100% {
+        color: #184e77;
+    }
+}
+
+.card .content {
+    color: pink;
+    font-size: 1.6pc;
+    padding: 20px 30px 10px 30px;
+    text-align: justify;
+}
+
+.card .links {
+    position: absolute;
+    bottom: 0;
+    color: pink;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.card .links span {
+    margin: 20px;
     cursor: pointer;
-    margin: 0 10px 0 10px;
-    transition: .2s;
-    transform: scale(1);
-}
-
-.cardHD .card .buttons i:hover {
-    color: white;
-    transform: scale(1.1);
-}
-
-.cardHD .card .buttons i:active {
-    color: wheat;
-}
-
-.cardHD .card .buttons button .fa-discord:hover::after {
-    content: 'Discord Name';
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-    color: white;
+    transition: .5s;
+    position: relative;
     text-align: center;
-    background-color: rgb(194, 48, 75);
-    z-index: 2000;
 }
 
-.cardHD .card .buttons button:focus .fa-discord::after {
-    content: 'Kopyalandı!';
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    background-color: rgb(194, 48, 75);
-    z-index: 2000;
+.card .links span:hover {
+    transform: scale(1.2);
+    color: rgb(243, 241, 241);
 }
 
-.cardHD .card .buttons button .fa-robot:hover::after {
+.card .links span:hover .fa-discord::after {
+    content: 'Discord';
+    position: absolute;
+    font-size: 1.2pc;
+    background-color: rgba(202, 16, 16, 0.1);
+    border-radius: 2px;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card .links span:hover .fa-robot::after {
     content: 'EGUNOM';
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    background-color: rgb(194, 48, 75);
-    z-index: 2000;
+    position: absolute;
+    font-size: 1.2pc;
+    background-color: rgba(202, 16, 16, 0.1);
+    border-radius: 2px;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.cardHD .card .buttons button:focus .fa-robot::after {
-    content: 'Açıldı!';
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    background-color: rgb(194, 48, 75);
-    z-index: 2000;
-}
-
-.cardHD .card .buttons button:focus .fa-github::after {
-    content: 'Açıldı!';
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    background-color: rgb(194, 48, 75);
-    z-index: 2000;
-}
-
-.cardHD .card .buttons button .fa-github:hover::after {
-    content: 'Github';
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    background-color: rgb(194, 48, 75);
-    z-index: 2000;
-}
-
-.cardHD .card .buttons button .fa-at:hover::after {
+.card .links span:hover .fa-envelope::after {
     content: 'Gmail';
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    background-color: rgb(194, 48, 75);
-    z-index: 2000;
+    position: absolute;
+    font-size: 1.2pc;
+    background-color: rgba(202, 16, 16, 0.1);
+    border-radius: 2px;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.cardHD .card .buttons button:focus .fa-at::after {
-    content: 'Kopyalandı!';
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    background-color: rgb(194, 48, 75);
-    z-index: 2000;
+
+.card .links span:hover .fa-github::after {
+    content: 'Github';
+    position: absolute;
+    font-size: 1.2pc;
+    background-color: rgba(202, 16, 16, 0.1);
+    border-radius: 2px;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
