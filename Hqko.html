@@ -8,32 +8,32 @@
     <link rel="icon"
         href="https://static3.depositphotos.com/1000819/143/i/950/depositphotos_1434845-stock-photo-gothic-fire-font-letter-h.jpg">
     <script src="https://kit.fontawesome.com/98dedb3d86.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script src="./Hqko.js"></script>
     <link rel="stylesheet" href="./Hqko.css">
     <title>Hqko</title>
 </head>
 
 <body>
-    <div class="cardHD">
-        <div class="card">
-            <span></span>
-            <div class="content">
-                <h1 id="name">Hqko!</h1>
-                <p>
-                    Welcome to my website..
-                    If you want to own a website, contact us. <br>
-                    <u>For more about me👇</u>
-                </p>
-            </div>
-            <div class="buttons">
-                <button onclick="copy()"><i class="fab fa-discord"></i></button>
-                <button onclick="botOpen()"><i class="fas fa-robot"></i></button>
-                <button onclick="gitOpen()"><i class="fab fa-github"></i></button>
-                <button onclick="atCopy()"><i class="fas fa-at"></i></button>
-            </div>
+    <div class="load">
+        <div class="loader-container"><i class="fas fa-hospital-symbol"></i></div>
+    </div>
+    <div class="card">
+        <span class="cardbg"></span>
+        <div class="cardheader"><c>H</c><x>q</x><v>k</v><m>o</m></div>
+        <div class="content">Welcome to my website.. If you want to own a website, contact us.</div>
+        <div class="links">
+            <span><i class="fab fa-discord" onclick="dc()"></i></span>
+            <span><i class="fas fa-robot" onclick="egunom()"></i></span>
+            <span><i class="fas fa-envelope" onclick="gmail()"></i></span>
+            <span><i class="fab fa-github" onclick="github()"></i></span>
         </div>
     </div>
-
 </body>
+<script>
+    $(window).on("load", function () {
+        $(".load").fadeOut(2000);
+    });
+</script>
 
 </html>
