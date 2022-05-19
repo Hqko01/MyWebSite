@@ -1,0 +1,413 @@
+@import 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2pc;
+}
+
+body {
+    height: 100vh;
+    background-color: #343a40;
+    color: #ced4da;
+}
+
+/*-------------Upper Area--------------*/
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main .header {
+    width: 100%;
+    height: 40%;
+    background-image: url("https://i.picsum.photos/id/577/1000/1000.jpg?hmac=QD4pdTTAIu1Hcmn6ZwhWVlXRkCIBqJqQxlKsLs8KMjo");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: .7s;
+    animation: alivebg .7s linear;
+}
+
+@keyframes alivebg {
+    0% {
+        background-size: 200%;
+    }
+}
+
+.main .header.sticky {
+    height: 0;
+}
+
+.main .header-menu {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px #212529;
+    background-image: url("https://i.picsum.photos/id/974/1200/300.jpg?hmac=VbaDygfRR6kUl2ZCHwlesCAjINTEHyZ67pbZxY1nYaA");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    z-index: 200;
+    transition: 1s;
+}
+
+.main.sticky .header-menu {
+    background-image: url("https://i.picsum.photos/id/577/1000/1000.jpg?hmac=QD4pdTTAIu1Hcmn6ZwhWVlXRkCIBqJqQxlKsLs8KMjo");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .header-menu .filter {
+    position: absolute;
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: brightness(60%);
+}
+
+.main .header-menu h1 {
+    position: relative;
+    left: 5%;
+    color: #ced4da;
+    animation: alive .6s linear;
+    font-size: xx-large;
+    font-family: 'Calligraffitti', cursive;
+}
+
+@keyframes alive {
+    0% {
+        left: -20%;
+    }
+
+    100% {
+        left: 5%;
+    }
+}
+
+/*-------------Mobile Menu--------------*/
+
+.main .header-menu .menu {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    width: 100%;
+    padding-right: 5%;
+    animation: aliveMenu .6s linear;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes aliveMenu {
+    0% {
+        right: -20%;
+    }
+
+    100% {
+        right: 5%;
+    }
+}
+
+.main .header-menu .menu i {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.main .header-menu .menu i:active {
+    transform: scale(0.9);
+}
+
+/*-------------Menu Icons--------------*/
+
+.main .header-menu .icons {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    animation: icons .6s linear;
+    overflow: hidden;
+}
+
+@keyframes icons {
+    0% {
+        right: -30%;
+    }
+
+    100% {
+        right: 5%;
+    }
+}
+
+.main .header-menu .icons i {
+    font-size: 35px;
+    margin: 20px;
+    color: #ced4da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .4s;
+}
+
+.main .header-menu .icons i:hover {
+    margin-top: 10px;
+}
+
+.main .header-menu .icons i:hover span {
+    opacity: 1;
+    visibility: visible;
+    bottom: 10%;
+}
+
+.main .header-menu .icons span {
+    position: absolute;
+    bottom: -15%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .6s;
+}
+
+/*-------------Middle Area--------------*/
+
+.main .mid {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.main .mid .content {
+    width: 70%;
+    padding: 200px 50px 50px 50px;
+    opacity: 1;
+    visibility: visible;
+    animation: aliveContent 1s linear;
+}
+
+
+@keyframes aliveContent {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/*-------------Subdomain--------------*/
+
+.main .bottom .wave {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: #343a40 url("https://cdn.discordapp.com/attachments/433202242749726730/911696830616698960/wave.png");
+    background-size: 1000px 100px;
+    animation: animateWave 4s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-position-x: 0;
+    }
+}
+
+.main .bottom .wave {
+    position: relative;
+}
+
+.main .bottom .wave h2 {
+    font-family: 'Calligraffitti', cursive;
+    font-size: xx-large;
+    cursor: pointer;
+    text-shadow: 2px 4px #343a40;
+}
+
+.main .bottom .wave span {
+    position: absolute;
+    top: -20%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color:#ccc5b9;
+    z-index: 2;
+    color: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+.main .bottom .wave #box {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #ccc5b9;
+    transform: rotate(45deg);
+}
+
+/*-------------Card--------------*/
+
+.card-area {
+    display: flex;
+    flex: 30%;
+    margin: 200px 50px 50px 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-area .card {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 85%;
+    background-image: url("https://cdn.webtekno.com/media/cache/content_detail/article/107834/microsoft-discord-icin-10-milyar-dolari-gozden-cikardi-1616487700.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #495057;
+    transition: .7s linear;
+    border-radius: 10px;
+}
+
+.card-area .card span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backdrop-filter: brightness(10%);
+}
+
+.card-area .card .cardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card-area .card .cardContent .cardContentText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:left;
+    flex: 70%;
+    z-index: 20;
+}
+
+.card-area .card .cardContent .cardContentText h2 {
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.card-area .card .options {
+    display: flex;
+    flex: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 20;
+    margin-bottom: 20px;
+}
+
+.card-area .card .options .option {
+    width: 30px;
+    margin: 10px;
+    border: 1px solid white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+/*-------------Mobile-Menu--------------*/
+
+#mobileMenu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 300;
+    transition: 1s;
+}
+
+#mobileMenu .mobileMenuContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    background-color: #b1a7a6;
+    border-radius: 10px;
+}
+
+#mobileMenu .mobileMenuContent div {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #d3d3d3;
+    color: black;
+    border-bottom: 1px solid #b1a7a6;
+    cursor: pointer;
+}
+
+#mobileMenu .mobileMenuContent i {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+#mobileMenu .mobileMenuContent  i:hover {
+    transform: rotate(360deg);
+}
+
+#mobileMenu .mobileMenuContent  i:active {
+    transform: scale(0.9);
+}
+
+/*-------------Mobile--------------*/
+
+@media screen and (max-width: 1000px) {
+   .main .mid {
+       flex-direction: column;
+       text-align: center;
+   }
+
+   .main .header-menu .icons {
+       display: none;
+   }
+
+   .main .header-menu .menu {
+       opacity: 1;
+       visibility: visible;
+   }
+
+   .main .mid .content {
+       width: 100%;
+   }
+
+   .card-area .card {
+    display: none;
+   }
+}
