@@ -34,8 +34,8 @@ li[2].onclick = function () {
     li[1].classList.remove('active')
     li[3].classList.remove('active')
     li[4].classList.remove('active')
-
-    leftBG.style.backgroundImage = "url('https://m.bianet.org/system/uploads/1/articles/spot_image/000/204/361/original/99bb.jpg')"
+    
+    leftBG.style.backgroundImage = "url('https://evrimagaci.org/public/content_media/1345091ed86481cf431dbe7ff273373f.png')"
     contentH2.innerText = "Egunom"
     contentP.innerText = `Egunom yapay zeka üzerine geliştirdiğim bir bottur. Şuan sadece discord üzerinedir fakat aktif değildir.
                         İlerleyen süreçte farklı platformlarda aktif hale gelecektir.`
