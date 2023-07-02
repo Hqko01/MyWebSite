@@ -66,3 +66,13 @@ li[4].onclick = function () {
 }
 
 /* Options END */
+
+/* Loader Screen START*/
+
+const loader = document.querySelector('.loader')
+
+window.addEventListener("load", () => {
+    loader.classList.add('loaded')
+})
+
+/* Loader Screen END*/
