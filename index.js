@@ -36,7 +36,7 @@ options.forEach(element => {
             if (element.parentElement.parentElement.children[i] == element.parentElement) {
                 if (i == 0) {
                     setTimeout(() => {
-                        h2.textContent = 'Merhaba ben Hakan,'
+                        h2.textContent = 'Merhaba Ben Hakan,'
                         p.innerHTML = `
                         2004 Ağustos doğumluyum, Istanbul'da yaşıyorum, Beylikdüzü Borsa Istanbul Çok Programlı Anadolu
                         Lisesi'nde Bilişim bölümünde öğrenim gördüm, Beylikdüzü Belediyesi'nde Bilişim bölümünde 2021-2022
